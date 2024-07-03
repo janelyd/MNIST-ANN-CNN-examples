@@ -1,4 +1,4 @@
-# MNIST-El-Yazısı--Sayı-Tespiti
+# MNIST El Yazısı Sayı Tespiti
 MNIST veri seti kullanılarak el yazısı rakamları tanımak için bir Yapay Sinir Ağı (ANN) modelinin geliştirilmesi
 
 
