@@ -49,7 +49,9 @@ y--> çıktı
 num_labels = len(np.unique(y_train))
 # ^^^^^^ burada 10 rakam oldugunu kendi seçecek, daha sağlıklı yöntem
 # ama biz num_labels = 10 da diyebilirdik kendimiz belirtip
-
+""" Ne Zaman Hangisini Kullanmalı?
+Otomatik: Genel amaçlı kodlarda, farklı veri setleriyle çalışırken.
+Manuel: Sınıf sayısı kesin ve değişmeyecekse, veya performans kritikse. """
 
 # veri setinden örnek gösterilmesi
 # 10x10 piksel göster
