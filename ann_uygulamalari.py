@@ -65,6 +65,8 @@ for n in range(10):
   plt.imshow(x_train[n], cmap='gray')
   plt.axis('off')
 
+
+# bu fonksiyon, veri setinden 10 örnek görüntüyü yan yana gösterir
 def visualize_img(data):
   plt.figure(figsize=(10,10))
   for n in range(10):
@@ -87,6 +89,7 @@ x_train[2][14,10]
 # resmin piksellerdeki büütn degerlerin toplamı
 x_train[2].sum()
 
+# bu fonksiyon, bir görüntünün piksel değerlerini görselleştirir
 # görseli oluşturan pikseldeki sayıları, görselin üstüne koyma , görselleştirme
 def pixel_visualize(img):
   fig = plt.figure(figsize=(12,12))
@@ -155,9 +158,10 @@ modelin yapısını tanımladık :
 # bir de bu veriyi sinir ağının anlaycağı & kullanabileceği formata çevirmek gerek --> flatten
 # sıralı katmanlardan oluşan yapay sinir ağı oluşturulacak:
 model = tf.keras.Sequential([
-    Flatten(input_shape = (28,28,1)), # inputun şekillendiği katman
+    Flatten(input_shape = (28,28,1)), # inputun şekillendiği katman, 1 kanallı foto(gri tonlama)
     Dense(units= 128, activation = 'relu', name = 'layer1'),  # hidden layer, 128 nörondan oluşuyor
-    # neden 128 ? aktivasyon fonksiyonu neden relu?
+    # neden 128 ? -->  bu tür problemler için yaygın olarak kullanılan bir değerdir çünkü yeterince büyüktür
+    # aktivasyon fonksiyonu neden relu?
     # relu --> bir nöronu söndürme ya da ateşleme fonksiyonu
     # burada ağırlık & feature belirlenemediğinden kullandık ( araba olsa yaşı düştükçe fiyat artıyo derdik)
     Dense(units= num_labels, activation = 'softmax', name = 'output_layer')
