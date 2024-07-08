@@ -45,7 +45,11 @@ x-->pikseller(28x28 göseller)
 y--> çıktı
 """
 
+# etiket(sınıf sayısı) hesaplama vvvv
 num_labels = len(np.unique(y_train))
+# ^^^^^^ burada 10 rakam oldugunu kendi seçecek, daha sağlıklı yöntem
+# ama biz num_labels = 10 da diyebilirdik kendimiz belirtip
+
 
 # veri setinden örnek gösterilmesi
 # 10x10 piksel göster
